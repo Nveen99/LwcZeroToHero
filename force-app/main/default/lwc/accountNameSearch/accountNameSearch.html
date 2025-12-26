@@ -1,0 +1,27 @@
+<template>
+    <lightning-card title="Account Search" icon-name="standard:account">
+        <div class="slds-var-m-around_medium">
+            <lightning-input
+                name="search"
+                label="Search Account Name"
+                type="search"
+                onchange={handleChange}></lightning-input>
+        </div>
+
+        <div class="slds-var-m-around_medium">
+            <template if:true={accounts}>
+                <template for:each={accounts} for:item="acc">
+                    <div key={acc.Id}>
+                        {acc.Name}
+                    </div>
+                </template>
+            </template>
+
+            <template if:true={error}>
+                <p class="slds-text-color_error">
+                    Error loading accounts
+                </p>
+            </template>
+        </div>
+    </lightning-card>
+</template>

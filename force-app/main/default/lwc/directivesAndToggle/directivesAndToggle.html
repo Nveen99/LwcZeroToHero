@@ -1,0 +1,54 @@
+<template>
+    <!-- Conditional rendering -->
+    <lightning-card title="Conditional Rendering" icon-name="custom:custom2">
+        <div class="slds-var-m-aroung_medium">
+            <lightning-button
+                label="Show Message"
+                onclick={handleToShow}
+                variant="brand">
+            </lightning-button>
+
+            <lightning-button
+                label="Hide Message"
+                onclick={handleToHide}
+                variant="brand">
+            </lightning-button>
+
+            <template if:true={showMessage}>
+                <p>Welcome to Salesforce LWC Learning</p>
+            </template>
+
+        </div>
+    </lightning-card>
+
+    <!-- Toggle Standard -->
+    <lightning-card title="Toggle standard" icon-name="custom:custom3">
+        <div class="slds-var-m_around_medium">
+            <lightning-button
+                label="Toggle"
+                onclick={handleToggle}
+                variant="brand">
+            </lightning-button>
+
+            <template if:true={togggleText}>
+                <p>Hello, I am toggle component!</p>
+            </template>
+        </div>
+    </lightning-card>
+
+    <!-- Togggle Dynamic  -->
+    <lightning-card title="Toggle using dynamic" icon-name="custom:custom4">
+        <div class="slds-var-m_around_medium">
+            <lightning-button
+                label={handleLabel}
+                onclick={handleToggleDynamic}
+                variant="brand">
+            </lightning-button>
+
+            <template if:true={togggleTextDy}>
+                <p>Hello, I am toggle Dynamic component!</p>
+            </template>
+        </div>
+    </lightning-card>
+
+</template>

@@ -1,0 +1,13 @@
+<template>
+    <lightning-card title="One way data binding" icon-name="custom:custom14">
+        <h1 class="slds-var-m-aroung_medium">I am One way Data
+            Binding(html)</h1>
+        <p>{message}</p>
+    </lightning-card>
+
+    <lightning-card title="Two way data binding" icon-name="custom:custom15">
+        <lightning-input label="Enter greeting"
+            onchange={handleChange}></lightning-input>
+        <p>greeting: {greetingmessage}</p>
+    </lightning-card>
+</template>

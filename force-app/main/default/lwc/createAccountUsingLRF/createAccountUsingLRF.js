@@ -22,6 +22,8 @@ export default class AccountCreator extends NavigationMixin(LightningElement) {
     // Fields displayed in lightning-record-form
     fields = [ACCOUNT_NAME, ACCOUNT_PHONE, ACCOUNT_WEBSITE, ACCOUNT_INDUSTRY];
 
+
+
     //this will show when record is saved successfully
     handleSubmit(event) {
         // Stop Salesforce automatic save
@@ -42,6 +44,8 @@ export default class AccountCreator extends NavigationMixin(LightningElement) {
         // If validation passed, submit the record
         event.target.submit(fields);
         // Navigate to the Account home page
+
+        
 
     }
 

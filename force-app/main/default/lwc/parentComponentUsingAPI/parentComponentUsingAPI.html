@@ -2,8 +2,10 @@
     <lightning-card title="Parent Component using API"
         icon-name="custom:custom22">
         <div class="slds-m-around_medium">
+            <lightning-input type="text" name="message" label="Message"
+                value={message} onchange={changeHandler}></lightning-input>
             <c-child-component-using-a-p-i
-                message="This message from parent component"></c-child-component-using-a-p-i>
+                message-from-parent={message}></c-child-component-using-a-p-i>
         </div>
     </lightning-card>
 </template>

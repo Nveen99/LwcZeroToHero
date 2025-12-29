@@ -1,0 +1,12 @@
+<template>
+    <lightning-card title="Wire using Property" icon-name="custom:custom25">
+        <div class="slds-m-around_medium">
+
+            <template for:each={getAccounts.data} for:item="account">
+                <div
+                    key={account.id}>{account.Name}-{account.Phone}-{account.Rating}</div>
+            </template>
+        </div>
+    </lightning-card>
+
+</template>

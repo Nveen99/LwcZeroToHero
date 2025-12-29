@@ -14,4 +14,13 @@ public with sharing class AccountSeacrchHandler {
       string key = '%' + string.escapesingleQuotes(searchKey) + '%';
       return [SELECT Id, Name FROM Account WHERE Name LIKE :key  ORDER By Name ASC LIMIT 100]; 
    }
+
+   @AuraEnabled(cacheable=true)
+   public static List<Account> getAccounts(){
+    List<Account>accList =[SELECT Id, Name, Phone, Rating FROM Account ORDER By Name ASC LIMIT 100];
+     system.debug('accList:'+accList);
+    return accList;
+   
+
+   }
 }

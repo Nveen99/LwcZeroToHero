@@ -1,0 +1,14 @@
+<template>
+    <lightning-card title="Wire using parameter" icon-name="custom:custom80">
+        <div class="slds-var-m-around_medium">
+            <lightning-input type="search " label="Search"
+                onchange={handleSearch}
+                placeholder="Search name"></lightning-input>
+            <template for:each={accounts} for:item="account">
+                <div key={account.Id}>{account.Name}</div>
+            </template>
+
+        </div>
+    </lightning-card>
+
+</template>

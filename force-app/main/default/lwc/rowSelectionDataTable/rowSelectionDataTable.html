@@ -1,0 +1,13 @@
+<template>
+    <p>Selected Rows: {selectedRecords.length}</p>
+    <lightning-card title="Data Table" icon-name="custom:custom14">
+        <lightning-datatable
+            key-field="Id"
+            data={data}
+            columns={columns}
+            onrowselection={handleRowSelection}>
+
+        </lightning-datatable>
+
+    </lightning-card>
+</template>

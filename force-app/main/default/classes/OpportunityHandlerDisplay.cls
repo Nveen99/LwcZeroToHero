@@ -38,4 +38,14 @@ public static List<Opportunity> deleteOpportunityList(List<Opportunity> optyList
 
 
 }
+
+@AuraEnabled(cacheable=true)
+public static List<Opportunity> getListOppoAccName(){
+return [
+          SELECT Id, Name, StageName, CloseDate, Amount,Account.Name
+          FROM Opportunity
+          LIMIT 100
+      ];
+}
+
 }

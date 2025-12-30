@@ -1,7 +1,12 @@
 <template>
     <lightning-card title="Data Table TabSet" icon-name="custom:custom11">
         <lightning-tabset variant="scoped" active-tab-value="one">
-            <lightning-tab label="Row delete datatable" value="one">
+            <lightning-tab label="Data Table lookup standard" value="one">
+                <h3>Data Table lookup standard</h3>
+                <c-data-table-lookup-standard></c-data-table-lookup-standard>
+            </lightning-tab>
+
+            <lightning-tab label="Row delete datatable">
                 <h3>Row Selection Delete</h3>
                 <c-delete-row-selection-data-table></c-delete-row-selection-data-table>
             </lightning-tab>

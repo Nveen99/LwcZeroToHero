@@ -25,10 +25,10 @@ export default class DataTableLookupStandard extends LightningElement {
                     // to display the account name in the table
                     //JSON.parse(...) Converts string → new object
                     /* Use JSON.parse(JSON.stringify()) when:
-                        ✔️ Data comes from Apex or @wire
-                        ✔️ You need to modify values  
-                        ✔️ Datatable sorting/editing
-                        ✔️ Adding derived fields 
+                        1. Data comes from Apex or @wire
+                        2. You need to modify values  
+                        3. Datatable sorting/editing
+                        4. Adding derived fields 
                     */
                     if(this.data){
                         let tempData= JSON.parse(JSON.stringify(this.data)); // deep copy
@@ -36,6 +36,8 @@ export default class DataTableLookupStandard extends LightningElement {
                        // currentItem → one Opportunity record at a time
                         tempData.forEach((currentItem)=>{
                             currentItem.AccountId= currentItem.AccountId != undefined ? currentItem.Account.Name: '';
+                           // currentItem.AccPhone= currentItem.Account != undefined ? currentItem.Account.Phone: '';
+                           // currentItem.AccRating= currentItem.Account != undefined ? currentItem.Account.Rating: '';
                         });
                         this.data=tempData;
                         

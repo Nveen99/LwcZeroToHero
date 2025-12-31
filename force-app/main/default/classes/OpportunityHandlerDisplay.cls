@@ -42,7 +42,7 @@ public static List<Opportunity> deleteOpportunityList(List<Opportunity> optyList
 @AuraEnabled(cacheable=true)
 public static List<Opportunity> getListOppoAccName(){
 return [
-          SELECT Id, Name, StageName, CloseDate, Amount,Account.Name
+          SELECT Id, Name, StageName, CloseDate, Amount,Account.Name, Account.Phone, Account.Rating
           FROM Opportunity
           LIMIT 100
       ];

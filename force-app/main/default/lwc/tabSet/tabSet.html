@@ -1,7 +1,12 @@
 <template>
     <lightning-card title="Data Table TabSet" icon-name="custom:custom11">
         <lightning-tabset variant="scoped" active-tab-value="one">
-            <lightning-tab label="Data Table lookup standard" value="one">
+            <lightning-tab label="Data Table Get Parent Fields using Map"
+                value="one">
+                <c-data-table-get-parent-fields></c-data-table-get-parent-fields>
+            </lightning-tab>
+
+            <lightning-tab label="Data Table lookup standard">
                 <h3>Data Table lookup standard</h3>
                 <c-data-table-lookup-standard></c-data-table-lookup-standard>
             </lightning-tab>

@@ -1,0 +1,27 @@
+ <template>
+    <lightning-layout multiple-rows>
+        <lightning-layout-item size="10" padding="around-small">
+            <div class="slds-p-around_medium">
+                <p>Selected Rows: {selectedRecords.length}</p>
+            </div>
+        </lightning-layout-item>
+        <lightning-layout-item size="2" padding="around-small">
+            <div class="slds-p-around_medium">
+                <lightning-button
+                    label="Delete"
+                    variant="destructive"
+                    title="Delete"
+                    disabled={isDisabled}
+                    onclick={deleteSelectedRows}>
+                </lightning-button>
+            </div>
+        </lightning-layout-item>
+    </lightning-layout>
+
+    <lightning-card title="Data Table" icon-name="custom:custom14">
+        <lightning-datatable key-field="Id" data={data} columns={columns}
+            onrowselection={handleRowSelection}>
+        </lightning-datatable>
+
+    </lightning-card>
+</template>

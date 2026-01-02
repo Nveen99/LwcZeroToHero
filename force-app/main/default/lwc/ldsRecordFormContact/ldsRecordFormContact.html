@@ -1,0 +1,67 @@
+<template>
+    <lightning-card title="LDS Record Basic - View Mode"
+        icon-name="standard:contact">
+        <lightning-record-form
+            object-api-name="Contact"
+            record-id="003fj00000XqmOvAAJ"
+            layout-type="Full"
+            columns=2
+            mode="view">
+        </lightning-record-form>
+    </lightning-card>
+
+    <lightning-card title="LDS Record Dynamic- EDIT Mode"
+        icon-name="standard:contact">
+        <template if:true={isReady}>
+            <lightning-record-form
+                object-api-name={objectApiName}
+                record-id={recordId}
+                layout-type="Compact"
+                columns="2"
+                mode="edit">
+            </lightning-record-form>
+        </template>
+
+        <template if:false={isReady}>
+            <lightning-spinner
+                alternative-text="Loading record"></lightning-spinner>
+        </template>
+    </lightning-card>
+
+    <lightning-card title="LDS Record Dynamic - Limited Fields"
+        icon-name="standard:contact">
+        <template if:true={isReady}>
+            <lightning-record-form
+                object-api-name={objectApiName}
+                fields={fields}
+                record-id={recordId}
+                columns="2"
+                mode="edit">
+            </lightning-record-form>
+        </template>
+
+        <template if:false={isReady}>
+            <lightning-spinner
+                alternative-text="Loading record"></lightning-spinner>
+        </template>
+    </lightning-card>
+
+    <lightning-card title="LDS Record Dynamic - Create Page"
+        icon-name="standard:contact">
+        <template if:true={isReady}>
+            <lightning-record-form
+                object-api-name={objectApiName}
+                fields={fields}
+                columns="2"
+                mode="edit"
+                onsuccess={handleSuccess}>
+            </lightning-record-form>
+        </template>
+
+        <template if:false={isReady}>
+            <lightning-spinner
+                alternative-text="Loading record"></lightning-spinner>
+        </template>
+    </lightning-card>
+
+</template>

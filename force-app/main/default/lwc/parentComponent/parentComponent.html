@@ -1,0 +1,18 @@
+<template>
+    <lightning-card title="Parent to child communication - parent"
+        icon-name="custom:custom55">
+        <div class="slds-box slds-var-m-around_medium ">
+            <lightning-input label="Enter a Number" type="text"
+                onchange={handleChangeNumber}></lightning-input>
+
+            <lightning-button label="Increment" variant="brand"
+                onclick={handleSubmit}
+                title="Increment 1000"></lightning-button>
+            <lightning-button label="Decrement" variant="destroy"
+                onclick={handleDescrease}
+                title="Decrement by 100"></lightning-button>
+            <c-child-component message={messageFromParent}
+                num={number} count={number}></c-child-component>
+        </div>
+    </lightning-card>
+</template>

@@ -1,12 +1,14 @@
 <template>
     <lightning-card title="Child to Parent Component - AddEvent Listener">
         <div class="slds-var-p-around_medium">
-            <lightning-input type="text" label="FirstName"
+            <lightning-input type="text" label="FirstName" value={fname}
                 onchange={handleChangeFname}></lightning-input>
             <lightning-input type="text" label="LastName"
-                onchange={handleChangeLname}></lightning-input>
+                onchange={handleChangeLname} value={lname}></lightning-input>
             <lightning-button label="Submit"
                 onclick={handleSubmit}></lightning-button>
+            <lightning-button label="Clear"
+                onclick={handleClear}></lightning-button>
 
         </div>
     </lightning-card>

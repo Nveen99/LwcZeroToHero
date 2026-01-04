@@ -23,4 +23,18 @@ export default class C2pChildEventListener extends LightningElement {
         });
         this.dispatchEvent(evt);
     }
+
+    handleClear(){
+        this.fname='';
+        this.lname='';
+        const evt = new CustomEvent('submitevent', {
+            detail: {
+                fname: this.fname,
+                lname: this.lname
+            },
+            bubbles: true,
+            composed: true
+        });
+        this.dispatchEvent(evt);
+    }
 }

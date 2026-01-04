@@ -3,6 +3,9 @@
         icon-name="custom:custom111">
         <div class="slds-var-p-around_medium">
             <p>FullName: {firstName} {lastName}</p>
+            <lightning-datatable data={data} columns={columns}
+                key-field="Id" show-row-number
+                hide-checkbox-column></lightning-datatable>
             <c-c2p-child-event-listener></c-c2p-child-event-listener>
         </div>
     </lightning-card>

@@ -25,13 +25,3 @@ export default class C2pParentComponent extends LightningElement {
     
 } 
 
-
-
-
-
-
-
-
-
-
-

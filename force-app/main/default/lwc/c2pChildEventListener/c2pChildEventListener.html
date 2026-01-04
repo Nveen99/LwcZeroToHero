@@ -1,0 +1,13 @@
+<template>
+    <lightning-card title="Child to Parent Component - AddEvent Listener">
+        <div class="slds-var-p-around_medium">
+            <lightning-input type="text" label="FirstName"
+                onchange={handleChangeFname}></lightning-input>
+            <lightning-input type="text" label="LastName"
+                onchange={handleChangeLname}></lightning-input>
+            <lightning-button label="Submit"
+                onclick={handleSubmit}></lightning-button>
+
+        </div>
+    </lightning-card>
+</template>

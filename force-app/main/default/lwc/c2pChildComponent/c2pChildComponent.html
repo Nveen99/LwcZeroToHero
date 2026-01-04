@@ -1,0 +1,50 @@
+<template>
+    <lightning-card title="Child to Parent Component - Child"
+        icon-name="custom:custom11">
+        <lightning-layout multiple-rows>
+
+            <lightning-layout-item padding="around-small">
+                <lightning-button variant="brand" label="Addition"
+                    onclick={handleClickAddition} icon-name="utility:add"
+                    icon-position="right">
+                </lightning-button>
+            </lightning-layout-item>
+
+            <lightning-layout-item padding="around-small">
+                <lightning-button variant="brand" label="Subtraction"
+                    onclick={handleClickSubtraction} icon-name="utility:dash"
+                    icon-position="right">
+                </lightning-button>
+            </lightning-layout-item>
+
+            <lightning-layout-item padding="around-small">
+                <lightning-button variant="brand" label="Multiple * 2"
+                    onclick={handleClickMul}>
+                </lightning-button>
+            </lightning-layout-item>
+
+            <lightning-layout-item padding="around-small">
+                <lightning-button variant="brand"
+                    label="Multiple * 3 Datafactor" data-factor="3"
+                    onclick={handleClickMultiply}>
+                </lightning-button>
+            </lightning-layout-item>
+
+            <lightning-card title="Child to Parent Component - for ecach">
+
+                <lightning-layout-item padding="around-small">
+                    <template for:each={array} for:item="a">
+                        <lightning-button variant="brand" key={a}
+                            label={a} data-factor={a}
+                            onclick={handleClickMultiply}
+                            icon-name="utility:close"
+                            icon-position="left">
+                        </lightning-button>
+                    </template>
+                </lightning-layout-item>
+            </lightning-card>
+
+        </lightning-layout>
+
+    </lightning-card>
+</template>

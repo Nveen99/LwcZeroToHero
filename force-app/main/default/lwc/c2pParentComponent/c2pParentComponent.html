@@ -1,0 +1,15 @@
+<template>
+    <lightning-card title="Child to Parent Component - parent"
+        icon-name="custom:custom111">
+        <div class="slds-var-p-around_medium">
+            <p>Number: {number}</p>
+            <c-c2p-child-component onaddition={handleAddition}
+                onsubstraction={handleSubstraction}
+                onmultiple={handleMultiple}
+                onmultifactor={handleMuliFactor}></c-c2p-child-component>
+
+        </div>
+
+    </lightning-card>
+
+</template>

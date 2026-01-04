@@ -31,7 +31,6 @@
             </lightning-layout-item>
 
             <lightning-card title="Child to Parent Component - for each">
-
                 <lightning-layout-item padding="around-small">
                     <template for:each={array} for:item="a">
                         <lightning-button variant="brand" key={a}
@@ -44,6 +43,20 @@
                 </lightning-layout-item>
             </lightning-card>
 
+            <lightning-card title="Child to Parent Component - Sub Child">
+                <lightning-layout-item padding="around-small"
+                    onbuttonclickevent={handleSubChildMultiply}>
+
+                    <template for:each={array} for:item="a">
+                        <c-c2p-sub-child
+                            key={a}
+                            label={a}
+                            icon="utility:close">
+                        </c-c2p-sub-child>
+                    </template>
+
+                </lightning-layout-item>
+            </lightning-card>
         </lightning-layout>
 
     </lightning-card>

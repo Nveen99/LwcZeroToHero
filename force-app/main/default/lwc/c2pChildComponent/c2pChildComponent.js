@@ -32,4 +32,14 @@ export default class C2pChildComponent extends LightningElement {
     }
 
     array=[3,2,4,6,0];
+     array = [3, 2, 4, 6, 0];
+     handleSubChildMultiply(event) {
+        const factor = event.detail;
+
+        const parentEvent = new CustomEvent('multifactor', {
+            detail: factor
+        });
+
+        this.dispatchEvent(parentEvent);
+    }
 }

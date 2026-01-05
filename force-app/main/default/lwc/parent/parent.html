@@ -1,0 +1,11 @@
+<template>
+    <lightning-card title="Parent Component- Event Propagation"
+        icon-name="custom:custom13">
+        <div class="slds-m-around_medium slds-box"
+            onchildclick={handleChildClickDiv}>
+            <p>Message:{messageFromChild}</p>
+            <c-child onchildclick={handleChildClick}></c-child>
+        </div>
+    </lightning-card>
+
+</template>
